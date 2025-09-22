@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+
+<body>
+
+<input id="name" name="name"><label for="name">Username</label><br>
+<input id="pass" name="pass" type="password"><label for="pass">Password</label>
+<br><button onclick="work()">submit</button><h1>Welcome</h1>
+<script>
+creds = ["te$t1!", "te$t2@"]
+function work() {
+  if(creds.includes(pass.value.toString())){
+    const w = window.open();
+    w.document.write(`
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="https://canvas.instructure.com/favicon.ico">
+    <style>
+    *{
+      margin:0px;
+      padding:0px;
+      height:101vh;
+      Width:101vw;
+      overflow:hidden;
+      background-color:#2e2e2e;
+    }
+    </style>
+    <iframe src="start.html">error</iframe>
+    `);
+    location.replace("https://google.com");
+  }
+
+}
+</script>
+</body>
+</html>

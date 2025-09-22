@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+
+body {
+  background: #2e2e2e;
+  color: white;
+  font-family: sans-serif;
+}
+
+</style>
+</head>
+
+<body>
+<a href="echo.html">go back</a>
+<h1>Games Player</h1>
+
+
+<div><iframe id="iframe" sandbox="allow-scripts allow-same-origin" src="https://3kh0-scm.vercel.app" height=50% width=50%></iframe>
+<button id="fillButton">fullscreen</button>
+</div>
+
+
+
+<script>
+
+document.getElementById('fillButton').addEventListener('click', () => {
+  if (iframe.requestFullscreen) {
+    iframe.requestFullscreen();
+  } else if (iframe.mozRequestFullScreen) { 
+    iframe.mozRequestFullScreen();
+  } else if (iframe.webkitRequestFullscreen) {
+    iframe.webkitRequestFullscreen();
+  } else if (iframe.msRequestFullscreen) {
+    iframe.msRequestFullscreen();
+  }
+});
+
+
+
+const url = new URL(window.location);
+  const params = new URLSearchParams(url.search);
+  const game = params.get('game');
+  iframe.src = "https://3kh0-scm.vercel.app/" + game
+
+</script>
+</body>
+
+</html>

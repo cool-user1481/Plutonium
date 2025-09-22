@@ -1,0 +1,71 @@
+<style>
+
+*{
+  color: white;
+  font-family: sans-serif;
+}
+
+body {
+  background-color:#2e2e2e;
+  overflow: hidden;
+}
+
+#bkgn {
+  height: 100vh;
+  width: 80vw;
+  display: absolute;
+  position: absolute;
+  float: left;
+}
+
+#menu {
+  display: absolute;
+  position: absolute;
+  width:20vw;
+  height:100vh;
+  background: #555;
+  top:0px;
+  right:0px;
+  margin:0px;
+  padding:10px;
+  float:right;
+  z-index:67;
+}
+</style>
+
+<div id="bkgn"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+const birds = VANTA.BIRDS({
+  el: "#bkgn",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x2e2e2e,
+  color1: 0xff26,
+  backgroundAlpha: 0.00,
+  quantity: 6.00
+})
+
+birds.setOptions({
+  color1: 0xca1d1d,
+  color2: 0x159dbb,
+  birdSize: 1.10,
+  wingSpan: 28.00,
+  speedLimit: 6.00,
+  separation: 30.00,
+  alignment: 34.00,
+  cohesion: 28.00,
+  quantity: 4.00
+})
+
+</script>
+
+
+
+<div id="menu"><h1>Settings</h1><br><input></div>
