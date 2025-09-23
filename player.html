@@ -11,6 +11,12 @@ body {
 a {
   color: aliceblue;
 }
+
+.iframe {
+  background:white;
+  width:50%;
+  height:50%;
+}
 </style>
 </head>
 
@@ -19,7 +25,7 @@ a {
 <h1>Games Player</h1>
 
 
-<div><iframe id="iframe" sandbox="allow-scripts allow-same-origin" src="https://3kh0-scm.vercel.app" height=50% width=50% allowtransparency="false">error, womp womp, use a modern browser or smtn, idk.</iframe>
+<div><div class=iframe><iframe id="iframe" sandbox="allow-scripts allow-same-origin" src="https://3kh0-scm.vercel.app" height=50% width=50% allowtransparency="false">error, womp womp, use a modern browser or smtn, idk.</iframe></div>
 <button id="fillButton">fullscreen</button>
 </div>
 
@@ -51,3 +57,4 @@ const url = new URL(window.location);
 
 
 </html>
+
