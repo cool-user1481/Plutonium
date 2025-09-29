@@ -3,7 +3,7 @@
 <div id="bkgn"></div>
 <div class="bungee wideSpace" id="wideSpace">welcome</div>
 <div id="container"></div>
-<div class="settingsMenu" id="settingsMenu"><h1 style="padding:5px;">Settings</h1><div class="exit" onclick="closeSettings();">x</div></div>
+<div class="settingsMenu" id="settingsMenu"><h1 style="padding:5px;">Settings</h1><input id="effectInput" value="cells"><div class="exit" onclick="closeSettings();">x</div></div>
 <link rel="stylesheet" type="text/css" href="assets/homepage.css">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js" loading="lazy"></script>
@@ -124,6 +124,8 @@ VANTA.TOPOLOGY({
 break;
 }
 
+effectInput.value = "cells";
+setInterval(()=>{effect = effectInput.value},10);
 
 const data = [
 {
@@ -183,5 +185,6 @@ setTimeout(()=>{setInterval(()=>{wideSpace.innerHTML=wideText[wideI]; wideI++;},
 
 </body>
 </html>
+
 
 
