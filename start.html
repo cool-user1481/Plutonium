@@ -22,6 +22,7 @@ let effects = ["birds", "cells", "fog", "clouds", "waves", "net", "height"];
 changeEffect();
 
 function changeEffect(){
+  document.querySelectorAll('canvas').destroy();
 switch(effect) {
   case "birds":
     VANTA.BIRDS({
@@ -187,6 +188,7 @@ setTimeout(()=>{setInterval(()=>{wideSpace.innerHTML=wideText[wideI]; wideI++;},
 
 </body>
 </html>
+
 
 
 
